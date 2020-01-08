@@ -54,7 +54,7 @@ class LinkField extends TextField
      */
     public function Field($properties = [])
     {
-        Requirements::javascript('sheadawson/silverstripe-linkable: client/dist/js/bundle.js');
+        Requirements::javascript('dynamic/silverstripe-linkable: client/dist/js/bundle.js');
 
         return parent::Field();
     }
@@ -69,7 +69,8 @@ class LinkField extends TextField
         $this->getLinkObject();
 
         $action = FormAction::create('doSaveLink', _t('Linkable.SAVE', 'Save'))
-            ->setUseButtonTag('true');
+            ->setUseButtonTag('true')
+            ->addExtraClass('btn btn-primary');
 
         if (!$this->isFrontend) {
             $action
