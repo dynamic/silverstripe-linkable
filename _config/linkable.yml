@@ -1,0 +1,12 @@
+---
+Name: linkable
+Only:
+  moduleexists: 'silverstripe/cms'
+---
+Sheadawson\Linkable\Models\Link:
+  extensions:
+    - Sheadawson\Linkable\Extensions\LinkableSiteTreeExtension
+
+Page:
+  extensions:
+    - Sheadawson\Linkable\Extensions\LinkableDataExtension

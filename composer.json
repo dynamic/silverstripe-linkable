@@ -1,0 +1,49 @@
+{
+    "name": "dynamic/silverstripe-linkable",
+    "type": "silverstripe-vendormodule",
+    "description": "A couple of handy form fields and objects for managing external and internal links on DataObjects",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "silverstripe",
+        "cms",
+        "link"
+    ],
+    "homepage": "http://github.com/dynamic/silverstripe-linkable",
+    "authors": [
+        {
+            "name": "Dynamic",
+            "email": "dev@dynamicagency.com"
+        }
+    ],
+    "support": {
+        "issues": "http://github.com/dynamic/silverstripe-linkable/issues"
+    },
+    "require": {
+        "silverstripe/vendor-plugin": "^1.0",
+        "silverstripe/framework": "^4.0",
+        "unclecheese/display-logic": "^2.0",
+        "embed/embed": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sheadawson\\Linkable\\": "src/",
+            "Sheadawson\\Linkable\\Tests\\": "tests/"
+        }
+    },
+    "suggest": {
+        "silverstripe/cms": "To allow for a linking of the SiteTree data object."
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "expose": [
+            "client"
+        ]
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
