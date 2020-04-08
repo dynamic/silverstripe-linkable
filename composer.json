@@ -13,8 +13,20 @@
         {
             "name": "Dynamic",
             "email": "dev@dynamicagency.com"
+        },
+        {
+            "name": "Shea Dawson",
+            "email": "shea@silverstripe.com.au"
+        },
+        {
+            "name": "Marcus Nyeholt",
+            "email": "marcus@silverstripe.com.au"
         }
     ],
+    "replace": {
+        "name": "sheadawson/silverstripe-linkable",
+        "version": "1.3.0"
+    },
     "support": {
         "issues": "http://github.com/dynamic/silverstripe-linkable/issues"
     },
