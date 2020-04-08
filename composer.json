@@ -24,7 +24,7 @@
         }
     ],
     "replace": {
-        "sheadawson/silverstripe-linkable": "1.0.x-dev"
+        "sheadawson/silverstripe-linkable": "^2.0"
     },
     "support": {
         "issues": "http://github.com/dynamic/silverstripe-linkable/issues"
