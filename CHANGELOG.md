@@ -1,6 +1,18 @@
 # Changelog
 
-## [1.0.1](https://github.com/dynamic/silverstripe-linkable/tree/1.0.1) (2020-01-07)
+## [1.0.2](https://github.com/dynamic/silverstripe-linkable/tree/1.0.2) (2020-04-13)
+
+[Full Changelog](https://github.com/dynamic/silverstripe-linkable/compare/1.0.1...1.0.2)
+
+**Closed issues:**
+
+- composer should indicate this package replaces sheadawson/silverstripe-linkable [\#9](https://github.com/dynamic/silverstripe-linkable/issues/9)
+
+**Merged pull requests:**
+
+- Specify that this module replaces sheadawson/silverstripe-linkable [\#10](https://github.com/dynamic/silverstripe-linkable/pull/10) ([altwohill](https://github.com/altwohill))
+
+## [1.0.1](https://github.com/dynamic/silverstripe-linkable/tree/1.0.1) (2020-01-08)
 
 [Full Changelog](https://github.com/dynamic/silverstripe-linkable/compare/1.0.0...1.0.1)
 
