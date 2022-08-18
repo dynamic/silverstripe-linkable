@@ -96,30 +96,36 @@ class EmbeddedObjectField extends FormField
 
             if (strlen($this->object->SourceURL)) {
                 $properties['ObjectTitle'] = TextField::create(
-                    $this->getName() . '[title]', _t('Linkable.TITLE', 'Title')
+                    $this->getName() . '[title]',
+                    _t('Linkable.TITLE', 'Title')
                 );
                 $properties['Width'] = TextField::create(
-                    $this->getName() . '[width]', _t('Linkable.WIDTH', 'Width')
+                    $this->getName() . '[width]',
+                    _t('Linkable.WIDTH', 'Width')
                 );
                 $properties['Height'] = TextField::create(
-                    $this->getName() . '[height]', _t('Linkable.HEIGHT', 'Height')
+                    $this->getName() . '[height]',
+                    _t('Linkable.HEIGHT', 'Height')
                 );
                 $properties['ThumbURL'] = HiddenField::create($this->getName() . '[thumburl]', '');
                 $properties['Type'] = HiddenField::create($this->getName() . '[type]', '');
 
                 if ($this->editableEmbedCode) {
                     $properties['EmbedHTML'] = TextareaField::create(
-                        $this->getName() . '[embedhtml]', 'Embed code'
+                        $this->getName() . '[embedhtml]',
+                        'Embed code'
                     );
                 } else {
                     $properties['EmbedHTML'] = HiddenField::create($this->getName() . '[embedhtml]', '');
                 }
 
                 $properties['ObjectDescription'] = TextAreaField::create(
-                    $this->getName() . '[description]', _t('Linkable.DESCRIPTION', 'Description')
+                    $this->getName() . '[description]',
+                    _t('Linkable.DESCRIPTION', 'Description')
                 );
                 $properties['ExtraClass'] = TextField::create(
-                    $this->getName() . '[extraclass]', _t('Linkable.CSSCLASS', 'CSS class')
+                    $this->getName() . '[extraclass]',
+                    _t('Linkable.CSSCLASS', 'CSS class')
                 );
 
                 foreach ($properties as $key => $field) {
@@ -134,7 +140,8 @@ class EmbeddedObjectField extends FormField
 
                 if ($this->object->ThumbURL) {
                     $properties['ThumbImage'] = LiteralField::create(
-                        $this->getName(), '<img src="' . $this->object->ThumbURL . '" />'
+                        $this->getName(),
+                        '<img src="' . $this->object->ThumbURL . '" />'
                     );
                 }
             }
@@ -191,7 +198,8 @@ class EmbeddedObjectField extends FormField
 
         $url = $request->postVar('URL');
         if (strlen($url)) {
-            $info = Embed::create($url);
+            $embed = new Embed();
+            $info = $embed->get($url);
 
             if ($info) {
                 $object = EmbeddedObject::create();
@@ -204,7 +212,8 @@ class EmbeddedObjectField extends FormField
                 return $this->FieldHolder();
             } else {
                 $this->message = _t(
-                    'EmbeddedObjectField.ERROR', 'Could not look up provided URL: ' . Convert::raw2xml($url)
+                    'EmbeddedObjectField.ERROR',
+                    'Could not look up provided URL: ' . Convert::raw2xml($url)
                 );
 
                 return $this->FieldHolder();
