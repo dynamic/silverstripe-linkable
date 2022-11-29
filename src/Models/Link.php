@@ -381,7 +381,7 @@ class Link extends DataObject
      */
     public function getClasses()
     {
-        $classes = $this->cssClass ? explode($this->cssClass, ' ') : [];
+        $classes = $this->cssClass ? explode(' ', $this->cssClass) : [];
         $this->extend('updateClasses', $classes);
         $classes = implode(' ', $classes);
 
