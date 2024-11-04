@@ -35,7 +35,7 @@
         "unclecheese/display-logic": "^3.0"
     },
     "require-dev": {
-        "silverstripe/recipe-testing": "^3",
+        "silverstripe/recipe-testing": "^3"
     },
     "autoload": {
         "psr-4": {
