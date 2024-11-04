@@ -1,14 +1,13 @@
 {
     "name": "dynamic/silverstripe-linkable",
-    "type": "silverstripe-vendormodule",
     "description": "A couple of handy form fields and objects for managing external and internal links on DataObjects",
     "license": "BSD-3-Clause",
+    "type": "silverstripe-vendormodule",
     "keywords": [
         "silverstripe",
         "cms",
         "link"
     ],
-    "homepage": "http://github.com/dynamic/silverstripe-linkable",
     "authors": [
         {
             "name": "Dynamic",
@@ -23,28 +22,30 @@
             "email": "marcus@silverstripe.com.au"
         }
     ],
-    "replace": {
-        "sheadawson/silverstripe-linkable": "^2.0"
-    },
+    "homepage": "http://github.com/dynamic/silverstripe-linkable",
     "support": {
         "issues": "http://github.com/dynamic/silverstripe-linkable/issues"
     },
     "require": {
-        "silverstripe/vendor-plugin": "^1.0",
-        "silverstripe/framework": "^4.0",
-        "unclecheese/display-logic": "^2.0"
+        "silverstripe/framework": "^5.0",
+        "unclecheese/display-logic": "^3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7"
     },
+    "replace": {
+        "sheadawson/silverstripe-linkable": "^2.0"
+    },
+    "suggest": {
+        "silverstripe/cms": "To allow for a linking of the SiteTree data object."
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Sheadawson\\Linkable\\": "src/",
             "Sheadawson\\Linkable\\Tests\\": "tests/"
         }
-    },
-    "suggest": {
-        "silverstripe/cms": "To allow for a linking of the SiteTree data object."
     },
     "extra": {
         "branch-alias": {
@@ -53,7 +54,5 @@
         "expose": [
             "client"
         ]
-    },
-    "prefer-stable": true,
-    "minimum-stability": "dev"
+    }
 }
