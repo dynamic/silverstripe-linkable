@@ -1,5 +1,5 @@
 {
-    "name": "sheadawson/silverstripe-linkable",
+    "name": "dynamic/silverstripe-linkable",
     "type": "silverstripe-vendormodule",
     "description": "A couple of handy form fields and objects for managing external and internal links on DataObjects",
     "license": "BSD-3-Clause",
