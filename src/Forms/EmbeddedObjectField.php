@@ -87,8 +87,8 @@ class EmbeddedObjectField extends FormField
      */
     public function FieldHolder($properties = [])
     {
-        Requirements::css('sheadawson/silverstripe-linkable: client/dist/styles/bundle.css');
-        Requirements::javascript('sheadawson/silverstripe-linkable: client/dist/js/bundle.js');
+        Requirements::css('dynamic/silverstripe-linkable: client/dist/styles/bundle.css');
+        Requirements::javascript('dynamic/silverstripe-linkable: client/dist/js/bundle.js');
 
         if ($this->object && $this->object->ID) {
             $properties['SourceURL'] = TextField::create($this->getName() . '[sourceurl]', '')
