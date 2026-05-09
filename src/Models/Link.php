@@ -13,7 +13,6 @@ use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use UncleCheese\DisplayLogic\Forms\Wrapper;
 use SilverStripe\Core\Convert;
-use SilverStripe\ORM\ValidationResult;
 use SilverStripe\ORM\DataObject;
 
 /**
