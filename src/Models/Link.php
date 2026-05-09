@@ -2,6 +2,8 @@
 
 namespace Sheadawson\Linkable\Models;
 
+use SilverStripe\Core\Validation\ValidationResult;
+
 use SilverStripe\Assets\File;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\CheckboxField;
@@ -440,7 +442,7 @@ class Link extends DataObject
      *
      * @return ValidationResult
      */
-    public function validate()
+    public function validate(): ValidationResult
     {
         $valid = true;
         $message = null;
