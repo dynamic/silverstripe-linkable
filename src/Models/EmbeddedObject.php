@@ -101,7 +101,7 @@ class EmbeddedObject extends DataObject
     /**
      * @return string
      */
-    public function forTemplate()
+    public function forTemplate(): string
     {
         switch ($this->Type) {
             case 'video':
