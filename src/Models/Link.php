@@ -313,7 +313,7 @@ class Link extends DataObject
      *
      * @return DBHTMLText|string
      */
-    public function forTemplate(): string
+    public function forTemplate(): DBHTMLText|string
     {
         if ($this->LinkURL) {
             $link = $this->renderWith([
