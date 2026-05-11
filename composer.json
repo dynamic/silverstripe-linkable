@@ -24,18 +24,18 @@
         }
     ],
     "replace": {
-        "sheadawson/silverstripe-linkable": "^2.0"
+        "sheadawson/silverstripe-linkable": "self.version"
     },
     "support": {
         "issues": "http://github.com/dynamic/silverstripe-linkable/issues"
     },
     "require": {
-        "silverstripe/framework": "^5.0",
-        "silverstripe/vendor-plugin": "^2.0",
-        "unclecheese/display-logic": "^3.0"
+        "silverstripe/framework": "^6",
+        "silverstripe/vendor-plugin": "^3",
+        "unclecheese/display-logic": "^3.0 || ^4.0"
     },
     "require-dev": {
-        "silverstripe/recipe-testing": "^3"
+        "silverstripe/recipe-testing": "^4"
     },
     "autoload": {
         "psr-4": {
@@ -48,7 +48,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.x-dev"
+            "dev-master": "3.x-dev"
         },
         "expose": [
             "client"

@@ -1,17 +1,15 @@
-# SilverStripe Linkable
+# SilverStripe Linkable (Dynamic Fork)
 
-This module is no longer maintained. Please checkout the following excellent alternatives
+This is the Dynamic fork of the original [sheadawson/silverstripe-linkable](https://github.com/sheadawson/silverstripe-linkable) module, which is no longer maintained upstream.
 
-* [gorriecoe/silverstripe-link](https://github.com/gorriecoe/silverstripe-link)
-* [gorriecoe/silverstripe-linkfield](https://github.com/gorriecoe/silverstripe-linkfield)
-* [silverstripe-embed](https://github.com/gorriecoe/silverstripe-embed)
+> **Note**: For new projects, consider using [silverstripe/linkfield](https://github.com/silverstripe/silverstripe-linkfield) instead. This fork is maintained for legacy compatibility.
 
 ## Requirements
 
-* SilverStripe 4.x
+* Silverstripe ^6
 * [Display Logic](https://github.com/unclecheese/silverstripe-display-logic)
 
-See 1.x branch/releases for SilverStripe 3.x support
+See `2` branch/releases for Silverstripe 5 support, `1.x` for Silverstripe 4
 
 ## Maintainers
 
