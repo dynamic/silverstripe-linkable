@@ -311,9 +311,9 @@ class Link extends DataObject
     /**
      * Renders an HTML anchor tag for this link
      *
-     * @return DBHTMLText|string
+     * @return string
      */
-    public function forTemplate(): DBHTMLText|string
+    public function forTemplate(): string
     {
         if ($this->LinkURL) {
             $link = $this->renderWith([
@@ -325,7 +325,7 @@ class Link extends DataObject
             // Legacy. Recommended to use templating above.
             $this->extend('updateLinkTemplate', $this, $link);
 
-            return $link;
+            return (string) $link;
         }
 
         return '';
