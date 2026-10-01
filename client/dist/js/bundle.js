@@ -166,22 +166,41 @@ _jquery2.default.entwine('ss', function ($) {
       });
 
       this.getDialog().on('click', 'button', function () {
-        $(this).addClass('loading ui-state-disabled');
+        $(this).addClass('loading ui-state-disabled').data('linkfield-submitter', true);
       });
 
-      this.getDialog().on('submit', 'form', function () {
-        var options = {};
-        options.success = function (response) {
-          if ($(response).is('.field')) {
-            self.getDialog().empty().dialog('close');
-            self.parents('.field:first').replaceWith(response);
-            form.addClass('changed');
-          } else {
-            self.getDialog().html(response);
-          }
-        };
+      this.getDialog().on('submit', 'form', function (e) {
+        e.preventDefault();
 
-        $(this).ajaxSubmit(options);
+        var $form = $(this);
+        var data = new FormData(this);
+
+        var $button = $form.find('button[name^="action_"]').filter(function () {
+          return $(this).data('linkfield-submitter');
+        }).first();
+        if ($button.length) {
+          data.append($button.attr('name'), $button.val() || 1);
+        }
+
+        $.ajax({
+          url: $form.attr('action'),
+          type: ($form.attr('method') || 'POST').toUpperCase(),
+          data: data,
+          processData: false,
+          contentType: false,
+          success: function success(response) {
+            if ($(response).is('.field')) {
+              self.getDialog().empty().dialog('close');
+              self.parents('.field:first').replaceWith(response);
+              form.addClass('changed');
+            } else {
+              self.getDialog().html(response);
+            }
+          },
+          error: function error(xhr) {
+            self.getDialog().html(xhr.responseText);
+          }
+        });
 
         return false;
       });
